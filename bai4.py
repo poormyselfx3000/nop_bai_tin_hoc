@@ -5,17 +5,34 @@
 # In ra kí tự thoả mãn đề bài. Nếu có nhiều kí tự, mỗi kí tự cách nhau một dấu cách.
 
 
-s = str(input("nhap gtr s: "))
+# danhsach = ["a"]
+# danhsach[0]
 
-tempoftemp = []
-ktr_xau = []
+# danhsachtu = {
+#     "a": "a"
+# }
+# # gan gia tri
+# danhsachtu["a"] = 0
 
-for temp in s:
-    if not temp in tempoftemp:
-        ktr_xau.append(temp)
+# # kiem tra ton tai
+# a_co_ton_tai_trong_danhsachtu_hay_khong_nhi = "b" in danhsachtu
 
-    tempoftemp.append(temp)
-      
+# # truy cap du lieu aabc
+# giatri = danhsachtu["a"]
 
+# print(giatri)
 
+# danhsach = ["a"]
+# danhsach[0]
+
+chuoi = "aabb"
+
+tudien = {}
+
+for kitu in chuoi:
+    if kitu not in tudien:
+        tudien[kitu] = 1
+    else:
+        tudien[kitu] += 1
+    
 
