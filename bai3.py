@@ -1,6 +1,10 @@
 # Dữ liệu vào : TONGCS.INP  Một dòng duy nhất chứa xâu S.
 # Kết quả : Ghi vào tệp TONGCS.OUT Một dòng duy nhất chứa tổng đã tính được.
 
+def isdick(so:str):
+    if "0" <= so <= "9":
+        return True
+
 s = str(input("hay nhap xau S (toi da 255 ky tu): "))
 if len(s) > 255 :
     print("chỉ được nhập tối đa 255 ký tự")
@@ -8,19 +12,21 @@ if len(s) > 255 :
 else: 
     ktr_xau = []
     tempoftemp = ""
-    print("tổng:",end=" ")
+    display = "tổng: "
     for temp in s:
-        if temp.isdigit():
+        if isdick(temp):
             tempoftemp += temp
         else:
             if tempoftemp != "":
                 ktr_xau.append(int(tempoftemp))
-                print(tempoftemp, end= " + ")
+                display += tempoftemp + " + "
                 tempoftemp = ""
 
     if tempoftemp != "":
-        print(tempoftemp, end= " = ")
+        display += tempoftemp + " + "
         ktr_xau.append(int(tempoftemp))
 
-
+    display = display[:-2] + " = "
+    print(display, end = "")
     print(sum(ktr_xau))
+
