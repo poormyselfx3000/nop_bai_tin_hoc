@@ -25,7 +25,7 @@
 # danhsach = ["a"]
 # danhsach[0]
 
-chuoi = "aaaabbbbc"
+chuoi = "sdddddsaaaaaa wd sda"
 
 tudien = {}
 
@@ -39,10 +39,20 @@ kitu = None
 top_kitu_xh = []
 kitu_xh = ""
 kitu_counter = 0
+
 for kitu in tudien:
-    if tudien[kitu] >= kitu_counter:
+    if tudien[kitu] > kitu_counter:
         kitu_counter = tudien[kitu]
         kitu_xh = kitu
-    if kitu_xh not in top_kitu_xh:    
-        top_kitu_xh.append(kitu_xh)
-print(top_kitu_xh)
+        top_kitu_xh.clear()
+        if kitu_xh not in top_kitu_xh:
+            top_kitu_xh.append(kitu_xh)
+
+    elif tudien[kitu] == kitu_counter:
+        kitu_counter = tudien[kitu]
+        kitu_xh = kitu
+        if kitu_xh not in top_kitu_xh:
+            top_kitu_xh.append(kitu_xh)
+    
+
+print(sorted(top_kitu_xh))
