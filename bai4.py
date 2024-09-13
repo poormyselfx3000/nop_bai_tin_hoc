@@ -38,7 +38,6 @@ for kitu in chuoi:
 top_kitu_xh = []
 kitu_counter = 0
 
-
 for kitu in tudien:
     if tudien[kitu] > kitu_counter:
         kitu_counter = tudien[kitu]
