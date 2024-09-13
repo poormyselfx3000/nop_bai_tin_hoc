@@ -25,7 +25,7 @@
 # danhsach = ["a"]
 # danhsach[0]
 
-chuoi = "aabb"
+chuoi = "aaaabbbbc"
 
 tudien = {}
 
@@ -34,5 +34,15 @@ for kitu in chuoi:
         tudien[kitu] = 1
     else:
         tudien[kitu] += 1
-    
 
+kitu = None
+top_kitu_xh = []
+kitu_xh = ""
+kitu_counter = 0
+for kitu in tudien:
+    if tudien[kitu] >= kitu_counter:
+        kitu_counter = tudien[kitu]
+        kitu_xh = kitu
+    if kitu_xh not in top_kitu_xh:    
+        top_kitu_xh.append(kitu_xh)
+print(top_kitu_xh)

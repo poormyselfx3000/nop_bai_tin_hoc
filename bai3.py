@@ -1,7 +1,7 @@
 # Dữ liệu vào : TONGCS.INP  Một dòng duy nhất chứa xâu S.
 # Kết quả : Ghi vào tệp TONGCS.OUT Một dòng duy nhất chứa tổng đã tính được.
 
-def isdick(so:str):
+def isdigit(so:str):
     if "0" <= so <= "9":
         return True
 
@@ -14,7 +14,7 @@ else:
     tempoftemp = ""
     display = "tổng: "
     for temp in s:
-        if isdick(temp):
+        if isdigit(temp):
             tempoftemp += temp
         else:
             if tempoftemp != "":
