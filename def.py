@@ -1,4 +1,8 @@
-def viet():
-    print("hello")
 
+
+def viet():
+    print(xinchao)
+
+xinchao = "hello"
 viet()
+
