@@ -14,7 +14,7 @@ for temp in names:
     
     name = temp.split()
     
-    for tempoftemp in name:
+    for tempoftemp in name: # co the thay the bang name[-1] tự nhiên nhấn thử ai zè đc hh
         lastname = tempoftemp
     link_name[lastname] = temp
     lastname_list.append(lastname)
