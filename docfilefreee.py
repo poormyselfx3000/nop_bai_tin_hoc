@@ -1,7 +1,7 @@
 def vietfile(filecanviet, giatricanviet):
     #mo file dau ra
     
-    vietancom = open(filecanviet,"w")
+    vietancom = open(filecanviet,"w",encoding = "utf8")
 
     #viet nhung j co trong doc vao file ancom.out  
             
@@ -11,7 +11,7 @@ def vietfile(filecanviet, giatricanviet):
 def docfile(filecandoc):
     #dung de mo file kia va doc xem trong day co j 
 
-    readancom = open(filecandoc)
+    readancom = open(filecandoc, encoding = "utf8")
 
     #chuyen du lieu doc duoc qua doc
 
